@@ -1,0 +1,89 @@
+GET http://localhost:3001/api/pages/published HTTP/1.1
+###
+
+GET http://localhost:3001/api/images HTTP/1.1
+
+GET http://localhost:3001/api/pages/published/1 HTTP/1.1
+###
+
+GET http://localhost:3001/api/pages/all HTTP/1.1
+###
+
+GET http://localhost:3001/api/title HTTP/1.1
+###
+
+GET http://localhost:3001/api/pages/all/1 HTTP/1.1
+###
+
+POST http://localhost:3001/api/pages HTTP/1.1
+Content-Type: application/json
+
+{
+    "title" : "Il pianeta Venere",
+    "creationDate" : "2023-04-18",
+    "publicationDate" : "2023-05-19",
+    "contents" : [
+        {
+            "type" : "Header",
+            "content" : "Il pianeta più caldo",
+            "positionId" : 1
+        },
+        {
+            "type" : "Image",
+            "content" : "Venus.png",
+            "positionId" : 2
+        },
+        {
+            "type" : "Paragraph",
+            "content" : "Classificato come un pianeta terrestre, a volte è definito il pianeta gemello della Terra, cui è molto simile per dimensioni e massa. Tuttavia per altri aspetti è piuttosto differente dal nostro pianeta. L'atmosfera di Venere è costituita principalmente da anidride carbonica[6] ed è molto più densa dell'atmosfera terrestre, con una pressione al livello del suolo pari a 92 atm.[1] La densità e la composizione dell'atmosfera creano un impressionante effetto serra[6] che rende Venere il pianeta più caldo del sistema solare.",
+            "positionId" : 3
+        }
+    ]
+}
+###
+
+POST http://localhost:3001/api/pages/4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id" : "4",
+    "title" : "Il pianeta Venere",
+    "publicationDate" : "2022-06-20",
+    "contents" : [
+        {
+            "type" : "Image",
+            "content" : "Venus.jpg",
+            "positionId" : 2
+        },
+        {
+            "type" : "Header",
+            "content" : "Il pianeta più caldo",
+            "positionId" : 1
+        },
+        {
+            "type" : "Paragraph",
+            "content" : "Classificato come un pianeta terrestre, a volte è definito il pianeta gemello della Terra, cui è molto simile per dimensioni e massa. Tuttavia per altri aspetti è piuttosto differente dal nostro pianeta. L'atmosfera di Venere è costituita principalmente da anidride carbonica[6] ed è molto più densa dell'atmosfera terrestre, con una pressione al livello del suolo pari a 92 atm.[1] La densità e la composizione dell'atmosfera creano un impressionante effetto serra[6] che rende Venere il pianeta più caldo del sistema solare.",
+            "positionId" : 3
+        }
+    ]
+}
+###
+
+DELETE http://localhost:3001/api/pages/12 HTTP/1.1
+###
+
+POST http://localhost:3001/api/pages/2/author HTTP/1.1
+Content-Type: application/json
+
+{
+    "id" : "2",
+    "author" : 3
+}
+###
+
+PUT http://localhost:3001/api/title HTTP/1.1
+Content-Type: application/json
+
+{
+    "title" : ""
+}
