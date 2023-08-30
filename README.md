@@ -1,6 +1,8 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/suhcjUE-)
-# Exam #1: "CMSmall"
-## Student: s301137 PAURI LUCA
+
+# Content-Management-System
+This project has been developed for the Web Application exam at Politecnico di Torino. 
+The project consists of a small content management system, in which users can access different contents created by the authors. If a user is authenticated, they are able to create and modify their own contents, while the admins can modify any content.
+The application has been developed using React for the frontend part, while for the backend Express, NodeJs and SQLite have been used.
 
 ## React Client Application Routes
 
